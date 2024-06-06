@@ -8,7 +8,8 @@ describe("create appointment", () => {
     const startsAt = new Date();
     const endsAt = new Date();
 
-    endsAt.setDate(endsAt.getDate() + 1);
+    startsAt.setDate(startsAt.getDate() + 1);
+    endsAt.setDate(endsAt.getDate() + 3);
     expect(
       createAppointment.execute({
         costumer: "Jon Doe",
