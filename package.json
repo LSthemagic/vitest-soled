@@ -1,0 +1,18 @@
+{
+  "name": "vitest-solid",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@eslint/js": "^9.4.0",
+    "globals": "^15.3.0",
+    "typescript-eslint": "^7.12.0",
+    "vitest": "^1.6.0"
+  }
+}
