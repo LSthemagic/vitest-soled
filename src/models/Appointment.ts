@@ -7,6 +7,11 @@ export interface AppointmentProps {
 export class Appointment {
   private props: AppointmentProps;
   constructor(props: AppointmentProps) {
+    const { endsAt, startsAt } = props;
+    if (endsAt <= startsAt) {
+      throw new Error("Appointment invalid: ends at small what starts at");
+      
+    }
     this.props = props;
   }
 
