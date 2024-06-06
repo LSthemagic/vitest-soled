@@ -8,9 +8,11 @@ export class Appointment {
   private props: AppointmentProps;
   constructor(props: AppointmentProps) {
     const { endsAt, startsAt } = props;
+    if (startsAt <= new Date()) {
+      throw new Error("Appointment invalid: starts At before now");
+    }
     if (endsAt <= startsAt) {
       throw new Error("Appointment invalid: ends at small what starts at");
-      
     }
     this.props = props;
   }
